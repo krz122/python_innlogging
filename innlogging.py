@@ -12,7 +12,7 @@ def loggin():
 
     for bruker in brukere:
         if b == bruker [0] and p == bruker[1]:
-        print ("du har logget in")
+         print ("du har logget in")
         return True 
     else:
         print ("feil brukernavn eller passord")
