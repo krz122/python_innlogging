@@ -1,10 +1,17 @@
 brukernavn = "abc"
-passord = "abc"
+passord = "abcd"
+
+
+
+
+brukere = [["abc","abcd"]]
 
 def loggin():
     b = input ("brukernavn:     ")
     p = input ("passord:    ")
-    if b == brukernavn and p == passord:
+
+    for bruker in brukere:
+        if b == bruker [0] and p == bruker[1]:
         print ("du har logget in")
         return True 
     else:
