@@ -1,3 +1,16 @@
+brukernavn = "abc"
+passord = "abc"
+
+def loggin():
+    b = input ("brukernavn:     ")
+    p = input ("passord:    ")
+    if b == brukernavn and p == passord:
+        print ("du har logget in")
+        return True 
+    else:
+        print ("feil brukernavn eller passord")
+        return False
+
 def main():
     state = "start"  # gyldige: "start", "innlogget", "quit"
 
@@ -17,8 +30,10 @@ def vis_startermeny():
     valg = input("Hva ønsker du å gjøre? ")
 
     if valg == "1":
-        print("Du er logget inn")
-        return "innlogget"
+        if loggin():
+            return "innlogget"
+        else:
+            return "start"
 
     elif valg == "2":
         print("Bruker registrert")
